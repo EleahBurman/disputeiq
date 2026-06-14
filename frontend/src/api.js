@@ -7,7 +7,7 @@ export async function analyzeDispute({ text, file }) {
     formData.append('text', text);
   }
 
-  const response = await fetch('http://127.0.0.1:8000/analyze', {
+  const response = await fetch('https://disputeiq.onrender.com/analyze', {
     method: 'POST',
     body: formData,
   });
