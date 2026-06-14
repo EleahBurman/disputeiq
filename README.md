@@ -86,4 +86,5 @@ Output:
 }
 ```
 ## Screenshot
-![DisputeIQ Screenshot](images/screenshot.png)
+![DisputeIQ Screenshot 1](images/screenshot.png)
+![DisputeIQ Screenshot 2](images/screenshot2.png)
