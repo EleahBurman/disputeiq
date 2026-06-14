@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+anthropic
+python-multipart
+pydantic
+lightgbm
+scikit-learn
+numpy
+pandas
+pypdf2
+python-dotenv
