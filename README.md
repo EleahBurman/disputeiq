@@ -85,3 +85,5 @@ Output:
   "confidence": 1.0
 }
 ```
+## Screenshot
+![DisputeIQ Screenshot](images/screenshot.png)
