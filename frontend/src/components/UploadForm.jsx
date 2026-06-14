@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function UploadForm({ onSubmit, loading }) {
+export default function UploadForm({ onSubmit, loading, onModeChange }) {
   const [mode, setMode] = useState("text");
   const [text, setText] = useState("");
   const [file, setFile] = useState(null);
@@ -18,7 +18,7 @@ export default function UploadForm({ onSubmit, loading }) {
     <div className="bg-white rounded-2xl shadow p-6">
       <div className="flex gap-4 mb-6">
         <button
-          onClick={() => setMode("text")}
+          onClick={() => { setMode("text"); setFile(null); onModeChange(); }}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === "text"
               ? "bg-indigo-600 text-white"
@@ -28,7 +28,7 @@ export default function UploadForm({ onSubmit, loading }) {
           Paste Text
         </button>
         <button
-          onClick={() => setMode("file")}
+          onClick={() => { setMode("file"); setText(""); onModeChange(); }}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === "file"
               ? "bg-indigo-600 text-white"
