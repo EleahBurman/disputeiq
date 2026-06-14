@@ -52,5 +52,5 @@ async def analyze_dispute(
         extracted=extracted,
         outcome=outcome,
         confidence=confidence,
-        explanation=f"Based on evidence strength of {extracted.evidence_strength}/10 and dispute reason '{extracted.dispute_reason}', this dispute was classified as {outcome}."
+        explanation=f"Based on evidence strength of {extracted.evidence_strength}/10 and dispute reason '{extracted.dispute_reason.value.replace('_', ' ') if extracted.dispute_reason else 'unknown'}'.  This dispute was classified as {outcome.value.replace('_', ' ')}."
     )
